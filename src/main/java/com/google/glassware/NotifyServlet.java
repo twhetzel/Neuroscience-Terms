@@ -152,8 +152,21 @@ public class NotifyServlet extends HttpServlet {
             + "Oh, did you say " + noteText + "? " + utterance + "</p>"));
         timelineItem.setMenuItems(Lists.newArrayList(
             new MenuItem().setAction("DELETE")));
-
         mirrorClient.timeline().update(timelineItem.getId(), timelineItem).execute();
+       
+        /**
+         * Add call to ontology search web service as documented here
+         * http://www.neuinfo.org/developers/ontoquest_web_services.shtm#searchconcepts
+         */
+        String searchEndpoint = "http://nif-services.neuinfo.org/ontoquest/concepts/search/";
+        String searchParameters = noteText+"?result_limit=1";
+        String searchSignature = searchEndpoint+searchParameters;
+        LOG.warning("Web service call: "+searchSignature);
+        // Call Ontoquest Search Concepts Web service
+        String searchResults = SearchOntoquest.parseXMLFile(searchSignature);
+        LOG.warning("Search results: "+searchResults);
+        MirrorClient.insertTimelineItem(credential, new TimelineItem().setHtml("<article class=\"auto-paginate\"><p class='text-auto-size'><strong class=\"blue\">"+noteText+"</strong>"
+        +"<br><em>Definition:</em> "+searchResults+"</p></article>"));     
       } else {
         LOG.warning("I don't know what to do with this notification, so I'm ignoring it.");
       }
@@ -169,6 +182,6 @@ public class NotifyServlet extends HttpServlet {
    */
   private static String makeHtmlForCard(String content) {
     return "<article class='auto-paginate'>" + content
-        + "<footer><p>Java Quick Start</p></footer></article>";
+        + "<footer><p>www.neuinfo.org</p></footer></article>";
   }
 }

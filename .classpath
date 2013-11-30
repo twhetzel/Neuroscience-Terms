@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/whetzel/.m2/repository/com/google/oauth-client/google-oauth-client/1.16.0-rc/google-oauth-client-1.16.0-rc.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="com.google.oauth-client"/>
+			<attribute name="maven.artifactId" value="google-oauth-client"/>
+			<attribute name="maven.version" value="1.16.0-rc"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/whetzel/.m2/repository/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.mortbay.jetty"/>
+			<attribute name="maven.artifactId" value="servlet-api-2.5"/>
+			<attribute name="maven.version" value="6.1.14"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/whetzel/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar"/>
+	<classpathentry kind="lib" path="/Users/whetzel/.m2/repository/com/google/http-client/google-http-client/1.16.0-rc/google-http-client-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/Users/whetzel/.m2/repository/com/google/http-client/google-http-client-jackson2/1.16.0-rc/google-http-client-jackson2-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/Users/whetzel/.m2/repository/com/google/apis/google-api-services-mirror/v1-rev20-1.16.0-rc/google-api-services-mirror-v1-rev20-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/Users/whetzel/.m2/repository/com/google/api-client/google-api-client/1.16.0-rc/google-api-client-1.16.0-rc.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="com.google.api-client"/>
+			<attribute name="maven.artifactId" value="google-api-client"/>
+			<attribute name="maven.version" value="1.16.0-rc"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="/mirror-quickstart-java-master-TEST"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

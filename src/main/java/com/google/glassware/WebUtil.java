@@ -30,6 +30,7 @@ public class WebUtil {
   public static String buildUrl(HttpServletRequest req, String relativePath) {
     GenericUrl url = new GenericUrl(req.getRequestURL().toString());
     url.setRawPath(relativePath);
+    url.setScheme("https"); // TW-THIS WAS ADDED LATER TO WORK WITH NGROK
     return url.build();
   }
 

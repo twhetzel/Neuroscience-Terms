@@ -53,7 +53,7 @@ public class NewUserBootstrapper {
     starterProjectContact.setId(MainServlet.CONTACT_ID);
     starterProjectContact.setDisplayName(MainServlet.CONTACT_NAME);
     starterProjectContact.setImageUrls(Lists.newArrayList(WebUtil.buildUrl(req,
-        "/static/images/chipotle-tube-640x360.jpg")));
+        "/static/images/nif-logo.png"))); //chipotle-tube-640x360.jpg
     starterProjectContact.setAcceptCommands(Lists.newArrayList(
         new Command().setType("TAKE_A_NOTE")));
     Contact insertedContact = MirrorClient.insertContact(credential, starterProjectContact);
@@ -73,7 +73,7 @@ public class NewUserBootstrapper {
 
     // Send welcome timeline item
     TimelineItem timelineItem = new TimelineItem();
-    timelineItem.setText("Welcome to the Glass Java Quick Start");
+    timelineItem.setText("Welcome to Neuroanatomy Terms");
     timelineItem.setNotification(new NotificationConfig().setLevel("DEFAULT"));
     TimelineItem insertedItem = MirrorClient.insertTimelineItem(credential, timelineItem);
     LOG.info("Bootstrapper inserted welcome message " + insertedItem.getId() + " for user "
